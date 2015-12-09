@@ -41,13 +41,13 @@ app.controller('lost', function($scope, $cordovaFileTransfer,$cordovaCamera,$cor
         });
   $scope.take_picture = function () {
       var options = {
-      quality: 100,
+      quality: 60,
       destinationType: Camera.DestinationType.DATA_URL,
       sourceType: Camera.PictureSourceType.CAMERA,
       allowEdit: true,
       encodingType: Camera.EncodingType.JPEG,
-      targetWidth: 600,
-      targetHeight: 600,
+      targetWidth: 300,
+      targetHeight: 300,
       popoverOptions: CameraPopoverOptions,
       saveToPhotoAlbum: false,
       correctOrientation:true
@@ -61,7 +61,7 @@ app.controller('lost', function($scope, $cordovaFileTransfer,$cordovaCamera,$cor
     });
   }
   $scope.upload_picture = function () {
-     var url = "http://192.168.43.113/find/uploaddata.api.php";
+     var url = "http://www.find.swatshawls.com/uploaddata.api.php";
      var targetPath = "data:image/jpeg;base64," + file_12;
      var filename = "khan.png";
      var options = {
